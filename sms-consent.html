@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SMS Consent Process — Bagheera AI</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.6; }
+  a { color: #0a66c2; }
+  h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+  h2 { margin-top: 2rem; font-size: 1.25rem; }
+  h3 { margin-top: 1.25rem; font-size: 1.05rem; }
+  .meta { color: #666; font-size: 0.95rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: 0.35rem 0; }
+  .back { display: inline-block; margin-bottom: 1rem; }
+  .mock {
+    border: 1px solid #d4d4d4;
+    border-radius: 8px;
+    padding: 20px 22px;
+    background: #fafafa;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.95rem;
+  }
+  .mock .field { margin: 10px 0; }
+  .mock label { display: block; font-weight: 600; margin-bottom: 4px; color: #333; }
+  .mock .input {
+    border: 1px solid #c4c4c4;
+    background: #fff;
+    border-radius: 4px;
+    padding: 8px 10px;
+    color: #777;
+    font-size: 0.9rem;
+  }
+  .mock .checkbox-row { display: flex; align-items: flex-start; gap: 10px; margin-top: 14px; padding: 12px; background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; }
+  .mock .checkbox-row input { margin-top: 4px; }
+  .mock .checkbox-row .text { font-size: 0.88rem; color: #333; }
+  .mock .signature { border-bottom: 1px solid #888; height: 28px; margin-top: 6px; }
+  .mock .submit { display: inline-block; background: #0a66c2; color: #fff; padding: 8px 18px; border-radius: 6px; margin-top: 14px; font-size: 0.9rem; }
+  .callout { background: #fff8e6; border-left: 4px solid #f0b400; padding: 12px 16px; border-radius: 4px; margin: 1rem 0; font-size: 0.95rem; }
+</style>
+</head>
+<body>
+<a class="back" href="/">← Back to Home</a>
+
+<h1>SMS Consent Process</h1>
+<p class="meta">Last Updated: May 7, 2026</p>
+
+<h2>Overview</h2>
+<p>Bagheera AI LLC ("Bagheera") sends SMS messages to dental patients on behalf of dental practices that use our platform. Patients opt in to receive SMS communications through the dental practice's standard patient intake process. This page documents the consent language and mechanisms used, in compliance with the Telephone Consumer Protection Act (TCPA) and the CTIA Messaging Principles and Best Practices.</p>
+
+<p>Consent is collected by the dental practice (Bagheera's customer) at the time the patient establishes care with the practice. Consent is never obtained from purchased lists, third-party data providers, or unsolicited contact lists.</p>
+
+<h2>How Patients Opt In</h2>
+
+<h3>1. New-Patient Intake Form (in office)</h3>
+<p>When a patient establishes care with a dental practice that uses Bagheera, the patient completes a new-patient intake form. The intake form includes a dedicated SMS communications consent checkbox with the language shown below. The patient must affirmatively check the box and sign the form for SMS consent to be recorded; the box is unchecked by default.</p>
+
+<div class="mock" aria-label="Mockup of intake form SMS consent section">
+  <div style="font-weight:700; font-size:1.05rem; margin-bottom:6px;">New Patient Intake Form</div>
+  <div style="color:#888; font-size:0.85rem; margin-bottom:14px;">[Practice Name]</div>
+
+  <div class="field">
+    <label>Mobile Phone Number</label>
+    <div class="input">(555) 555-0123</div>
+  </div>
+
+  <div class="checkbox-row">
+    <input type="checkbox" checked disabled aria-hidden="true" />
+    <div class="text">
+      <strong>SMS Communications Consent (optional).</strong>
+      I agree to receive SMS appointment reminders, confirmations, treatment plan follow-ups, and care communications from [Practice Name], delivered through Bagheera AI. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe at any time. Reply HELP for help. See the Bagheera <a href="/privacy.html">Privacy Policy</a> and <a href="/terms.html">Terms of Service</a>.
+    </div>
+  </div>
+
+  <div class="field" style="margin-top:18px;">
+    <label>Patient Signature</label>
+    <div class="signature"></div>
+  </div>
+
+  <div class="submit">Submit</div>
+</div>
+
+<h3>2. Digital Intake (where supported by the practice)</h3>
+<p>Some practices collect new-patient intake digitally through their practice management software or patient portal. When SMS consent is collected digitally, the same consent language above is presented next to a checkbox that is unchecked by default. The patient must affirmatively check the box to opt in.</p>
+
+<h2>Exact Consent Language</h2>
+<p>The following consent language is used on every intake channel, on paper and digital:</p>
+<div class="callout">
+  "I agree to receive SMS appointment reminders, confirmations, treatment plan follow-ups, and care communications from [Practice Name], delivered through Bagheera AI. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe at any time. Reply HELP for help."
+</div>
+
+<h2>What SMS Consent Authorizes</h2>
+<p>By opting in, the patient agrees to receive the following types of SMS messages from Bagheera on behalf of their dental practice:</p>
+<ul>
+  <li>Appointment reminders and confirmations</li>
+  <li>Treatment plan follow-ups for previously discussed, unscheduled treatment</li>
+  <li>Insurance and benefits-related communications</li>
+  <li>Care-related messages from the practice (e.g., post-procedure check-ins)</li>
+</ul>
+
+<p>SMS consent does <strong>not</strong> authorize, and Bagheera does not send:</p>
+<ul>
+  <li>Marketing or promotional messages from third parties</li>
+  <li>Messages to anyone who has not opted in through the practice</li>
+  <li>Messages to lead lists, purchased contact lists, or non-patients</li>
+</ul>
+
+<h2>How to Opt Out</h2>
+<p>Patients can opt out at any time by replying <strong>STOP</strong> to any SMS message they receive from Bagheera. Upon receiving STOP, Bagheera immediately suppresses the patient's number from all future SMS sends and confirms the unsubscribe with a final SMS. Patients may also reply <strong>HELP</strong> at any time, or contact us at <a href="mailto:mmacha1106@gmail.com">mmacha1106@gmail.com</a>, for assistance.</p>
+
+<p>Industry-standard opt-out keywords (STOP, STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT) are all honored.</p>
+
+<h2>Time-of-Day Restrictions</h2>
+<p>Bagheera only sends non-emergency SMS messages between 9:00 AM and 8:00 PM in the recipient's local time, in compliance with TCPA quiet-hours requirements.</p>
+
+<h2>Data Sharing</h2>
+<p>Phone numbers collected through the intake process are not sold, rented, or shared with third parties for marketing purposes. Data sharing is limited to the service providers that operate the messaging service (such as Twilio) under strict confidentiality agreements. See our <a href="/privacy.html">Privacy Policy</a> for full details.</p>
+
+<h2>Contact Us</h2>
+<p>If you have questions about Bagheera's SMS consent process, please contact us at:</p>
+<p>Email: <a href="mailto:mmacha1106@gmail.com">mmacha1106@gmail.com</a></p>
+
+</body>
+</html>
