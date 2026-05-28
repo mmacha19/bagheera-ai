@@ -1,139 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SMS Consent Process — Bagheera AI</title>
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.6; }
-  a { color: #0a66c2; }
-  h1 { font-size: 2rem; margin-bottom: 0.25rem; }
-  h2 { margin-top: 2rem; font-size: 1.25rem; }
-  h3 { margin-top: 1.25rem; font-size: 1.05rem; }
-  .meta { color: #666; font-size: 0.95rem; }
-  ul { padding-left: 1.25rem; }
-  li { margin: 0.35rem 0; }
-  .back { display: inline-block; margin-bottom: 1rem; }
-  .mock {
-    border: 1px solid #d4d4d4;
-    border-radius: 8px;
-    padding: 20px 22px;
-    background: #fafafa;
-    margin: 1rem 0 1.5rem;
-    font-size: 0.95rem;
-  }
-  .mock .field { margin: 10px 0; }
-  .mock label { display: block; font-weight: 600; margin-bottom: 4px; color: #333; }
-  .mock .input {
-    border: 1px solid #c4c4c4;
-    background: #fff;
-    border-radius: 4px;
-    padding: 8px 10px;
-    color: #777;
-    font-size: 0.9rem;
-  }
-  .mock .checkbox-row { display: flex; align-items: flex-start; gap: 10px; margin-top: 14px; padding: 12px; background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; }
-  .mock .checkbox-row input { margin-top: 4px; }
-  .mock .checkbox-row .text { font-size: 0.88rem; color: #333; }
-  .mock .signature { border-bottom: 1px solid #888; height: 28px; margin-top: 6px; }
-  .mock .submit { display: inline-block; background: #0a66c2; color: #fff; padding: 8px 18px; border-radius: 6px; margin-top: 14px; font-size: 0.9rem; }
-  .callout { background: #fff8e6; border-left: 4px solid #f0b400; padding: 12px 16px; border-radius: 4px; margin: 1rem 0; font-size: 0.95rem; }
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS Program & Consent — Bagheera AI LLC</title>
+<meta name="description" content="How patients opt in to SMS, what we send, sample messages, and how to opt out. CTIA / A2P 10DLC / TCPA compliant.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<a class="back" href="/">← Back to Home</a>
-
-<h1>SMS Consent Process</h1>
-<p class="meta">Last Updated: May 12, 2026</p>
-
-<h2>Overview</h2>
-<p>Bagheera AI LLC ("Bagheera") sends SMS messages to dental patients on behalf of dental practices that use our platform. Patients opt in to receive SMS communications through the dental practice's standard patient intake process. This page documents the consent language and mechanisms used, in compliance with the Telephone Consumer Protection Act (TCPA) and the CTIA Messaging Principles and Best Practices.</p>
-
-<p>Consent is collected by the dental practice (Bagheera's customer) at the time the patient establishes care with the practice. Consent is never obtained from purchased lists, third-party data providers, or unsolicited contact lists.</p>
-
-<div class="callout">
-  <strong>Pilot deployment.</strong> Bagheera is currently deployed at <strong>Plymouth Dentistry</strong>, the pilot dental practice referenced throughout this page and in our 10DLC campaign registration. The intake form examples below reflect the consent flow as deployed at Plymouth Dentistry.
-</div>
-
-<h2>How Patients Opt In</h2>
-
-<h3>1. New-Patient Intake Form (in office)</h3>
-<p>When a patient establishes care with a dental practice that uses Bagheera, the patient completes a new-patient intake form. The intake form includes a dedicated SMS communications consent checkbox with the language shown below. The patient must affirmatively check the box and sign the form for SMS consent to be recorded; the box is unchecked by default.</p>
-
-<div class="mock" aria-label="Mockup of Plymouth Dentistry intake form SMS consent section">
-  <div style="font-weight:700; font-size:1.05rem; margin-bottom:6px;">New Patient Intake Form</div>
-  <div style="color:#888; font-size:0.85rem; margin-bottom:14px;">Plymouth Dentistry</div>
-
-  <div class="field">
-    <label>Mobile Phone Number</label>
-    <div class="input">(555) 555-0123</div>
-  </div>
-
-  <div class="checkbox-row">
-    <input type="checkbox" checked disabled aria-hidden="true" />
-    <div class="text">
-      <strong>SMS Communications Consent (optional).</strong>
-      I agree to receive SMS appointment reminders, confirmations, treatment plan follow-ups, and care communications from Plymouth Dentistry, delivered through Bagheera AI. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe at any time. Reply HELP for help. See the Bagheera <a href="/privacy.html">Privacy Policy</a> and <a href="/terms.html">Terms of Service</a>.
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-inner">
+      <a href="/index.html" class="wordmark">Bagheera AI <span>Dental Operations · Florida</span></a>
+      <nav class="primary"><ul><li><a href="/index.html">Home</a></li><li><a href="/product.html">Product</a></li><li><a href="/about.html">About</a></li><li><a href="/sms-consent.html" class="active">SMS Program</a></li><li><a href="/contact.html">Contact</a></li></ul></nav>
     </div>
   </div>
+</header>
+<div class="wrap">
+  <section class="page-head">
+    <div class="kicker">SMS Program · A2P 10DLC</div>
+    <h1>How patients <em>opt in</em>, what we send, how to stop.</h1>
+    <p class="sub">This page describes the SMS program operated by Bagheera AI LLC on behalf of dental practice customers, the consent process, sample messages, and how patients can opt out.</p>
+  </section>
 
-  <div class="field" style="margin-top:18px;">
-    <label>Patient Signature</label>
-    <div class="signature"></div>
+  <section class="block">
+    <div class="sec-head">
+      <div class="sec-num">01 /</div>
+      <h2 class="sec-title">How patients <em>give consent</em>.</h2>
+    </div>
+    <div class="sec-body">
+      <div class="marginalia">
+        <span class="line">Written</span>
+        <span class="line">Affirmative</span>
+        <span class="line">Unchecked</span>
+        <span class="line">by default</span>
+      </div>
+      <div class="body-content">
+        <p class="lede">
+          Every patient who receives a message from the Treatment Chaser has signed
+          their dental practice&rsquo;s intake form, opting in to SMS communications, on
+          paper or digitally.
+        </p>
+        <p>
+          The consent checkbox is <strong>unchecked by default</strong>. Patients
+          affirmatively check the box and sign the form. Practices retain the signed
+          form as proof of consent for at least four (4) years.</p>
+
+        <h3>Sample <em>consent language</em></h3>
+        <div class="sms-sample">
+          <div class="meta">PATIENT INTAKE FORM · CHECKBOX</div>
+          &#9744; I agree to receive SMS text messages from [Practice Name] at the
+          mobile number above. Messages may include appointment confirmations,
+          reminders, rescheduling notifications, post-visit care, and follow-ups on
+          recommended treatment. Message frequency varies. Message and data rates may
+          apply. Reply STOP to unsubscribe, HELP for help. My mobile information will
+          not be shared with third parties for marketing.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="sec-head">
+      <div class="sec-num">02 /</div>
+      <h2 class="sec-title">What we <em>send</em>.</h2>
+    </div>
+    <div class="sec-body">
+      <div class="marginalia">
+        <span class="line">Treatment</span>
+        <span class="line">follow-ups</span>
+        <span class="line">only</span>
+        <span class="line">No PHI</span>
+      </div>
+      <div class="body-content">
+        <p>
+          The Bagheera AI Treatment Chaser sends one category of message:
+          <strong>follow-ups about recommended dental treatment</strong> that the patient
+          discussed with their dentist but has not yet scheduled. Every message
+          identifies the sending practice by name and includes opt-out instructions.
+        </p>
+
+        <h3>Sample <em>outbound messages</em></h3>
+        <div class="sms-sample">
+          <div class="meta">From: Plymouth Dentistry</div>
+          Hi Sarah, this is Plymouth Dentistry. We noticed you have a treatment plan we discussed at your last visit. Would you like to schedule? Reply YES to have us call, or STOP to opt out.
+        </div>
+        <div class="sms-sample">
+          <div class="meta">From: Plymouth Dentistry</div>
+          Hi James, this is a follow-up from Plymouth Dentistry on the treatment we discussed. Ready to book a time? Reply YES and we&rsquo;ll call you. Reply STOP to unsubscribe.
+        </div>
+
+        <h3>What we <em>do not</em> send</h3>
+        <ul>
+          <li>Marketing or promotional offers.</li>
+          <li>Specific procedure codes, costs, or clinical details.</li>
+          <li>Messages to patients who have not provided written consent.</li>
+          <li>Messages outside 9 AM &ndash; 6 PM in the patient&rsquo;s local timezone.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="sec-head">
+      <div class="sec-num">03 /</div>
+      <h2 class="sec-title">How to <em>opt out</em>.</h2>
+    </div>
+    <div class="sec-body">
+      <div class="marginalia">
+        <span class="line">Reply STOP</span>
+        <span class="line">Always works</span>
+        <span class="line">Permanent</span>
+        <span class="line">No exceptions</span>
+      </div>
+      <div class="body-content">
+        <p>
+          Patients can opt out of SMS communications at any time by replying any of
+          the following keywords to any message they have received:
+        </p>
+        <ul>
+          <li><strong>STOP</strong></li>
+          <li><strong>UNSUBSCRIBE</strong></li>
+          <li><strong>CANCEL</strong></li>
+          <li><strong>END</strong></li>
+          <li><strong>QUIT</strong></li>
+        </ul>
+        <p>Opt-outs are <strong>permanent and immediate</strong>. Once received, the patient&rsquo;s mobile number is added to an immutable opt-out list and will not receive any further messages from the practice through the Bagheera AI platform.</p>
+
+        <h3>Sample <em>STOP confirmation</em></h3>
+        <div class="sms-sample">
+          <div class="meta">From: Plymouth Dentistry</div>
+          You have been unsubscribed from Plymouth Dentistry messages. You will not receive further messages. Reply START to resubscribe.
+        </div>
+
+        <h3>Reply <em>HELP</em> for help</h3>
+        <div class="sms-sample">
+          <div class="meta">From: Plymouth Dentistry</div>
+          Plymouth Dentistry: For help, call (734) 474-9277 or email hello@bagheera-ai.com. Reply STOP to unsubscribe. Msg&amp;data rates may apply.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="sec-head">
+      <div class="sec-num">04 /</div>
+      <h2 class="sec-title">Program <em>disclosures</em>.</h2>
+    </div>
+    <div class="sec-body">
+      <div class="marginalia">
+        <span class="line">CTIA</span>
+        <span class="line">A2P 10DLC</span>
+        <span class="line">TCPA</span>
+        <span class="line">HIPAA</span>
+      </div>
+      <div class="body-content">
+        <div class="compliance">
+          <ul>
+            <li><strong>Message frequency.</strong> Up to 4 messages per month per patient. Frequency varies depending on the patient&rsquo;s treatment status and reply behavior.</li>
+            <li><strong>Message and data rates.</strong> Standard message and data rates may apply, depending on the patient&rsquo;s mobile carrier and plan.</li>
+            <li><strong>Carriers and supported handsets.</strong> All major US carriers. Supported on most modern mobile handsets.</li>
+            <li><strong>No data sharing.</strong> No mobile information will be shared with third parties or affiliates for marketing or promotional purposes at any time.</li>
+            <li><strong>Help and opt-out.</strong> Reply HELP for help. Reply STOP to unsubscribe. Help and opt-out keywords are honored 24/7.</li>
+            <li><strong>Privacy policy.</strong> See our full <a href="/privacy.html">Privacy Policy</a> for details on how we collect, use, and protect patient information.</li>
+            <li><strong>Terms of service.</strong> See our <a href="/terms.html">Terms of Service</a> for the contract governing use of our platform by dental practices.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <h3>Patient with a question about a message you <em>received?</em></h3>
+    <div class="actions">
+      <a href="mailto:hello@bagheera-ai.com">hello@bagheera-ai.com</a>
+      <a href="tel:+17344749277">(734) 474-9277</a>
+      <a href="/contact.html">Contact page &rarr;</a>
+    </div>
   </div>
-
-  <div class="submit">Submit</div>
 </div>
 
-<h3>2. Digital Intake (where supported by the practice)</h3>
-<p>Some practices collect new-patient intake digitally through their practice management software or patient portal. When SMS consent is collected digitally, the same consent language above is presented next to a checkbox that is unchecked by default. The patient must affirmatively check the box to opt in.</p>
-
-<h2>Exact Consent Language</h2>
-<p>The following consent language is used on every intake channel, on paper and digital:</p>
-<div class="callout">
-  "I agree to receive SMS appointment reminders, confirmations, treatment plan follow-ups, and care communications from Plymouth Dentistry, delivered through Bagheera AI. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe at any time. Reply HELP for help."
-</div>
-
-<p style="font-size:0.92rem; color:#555;">When Bagheera onboards additional dental practices in the future, the same consent language is used at each practice with the practice's own name substituted in place of "Plymouth Dentistry."</p>
-
-<h2>Sample Messages</h2>
-<p>Examples of the SMS messages a consenting patient may receive from Plymouth Dentistry, delivered through Bagheera AI:</p>
-<ul>
-  <li><em>Appointment reminder:</em> "Hi Sarah, this is a reminder of your dental appointment with Dr. Patel on Thu May 14 at 2:30 PM at Plymouth Dentistry. Reply C to confirm, R to reschedule, or STOP to unsubscribe."</li>
-  <li><em>Confirmation:</em> "Plymouth Dentistry: You're confirmed for Thu May 14, 2:30 PM with Dr. Patel. Reply R to reschedule, STOP to unsubscribe, HELP for help."</li>
-  <li><em>Post-visit care follow-up:</em> "Hi Sarah, Plymouth Dentistry here. Per Dr. Patel's recommendation today, your next cleaning is due around Nov 14. Reply Y to have us reach out to schedule, or STOP to unsubscribe."</li>
-</ul>
-
-<h2>What SMS Consent Authorizes</h2>
-<p>By opting in, the patient agrees to receive the following types of SMS messages from Bagheera on behalf of their dental practice:</p>
-<ul>
-  <li>Appointment reminders and confirmations</li>
-  <li>Treatment plan follow-ups for previously discussed, unscheduled treatment</li>
-  <li>Insurance and benefits-related communications</li>
-  <li>Care-related messages from the practice (e.g., post-procedure check-ins)</li>
-</ul>
-
-<p>SMS consent does <strong>not</strong> authorize, and Bagheera does not send:</p>
-<ul>
-  <li>Marketing or promotional messages from third parties</li>
-  <li>Messages to anyone who has not opted in through the practice</li>
-  <li>Messages to lead lists, purchased contact lists, or non-patients</li>
-</ul>
-
-<h2>How to Opt Out</h2>
-<p>Patients can opt out at any time by replying <strong>STOP</strong> to any SMS message they receive from Bagheera. Upon receiving STOP, Bagheera immediately suppresses the patient's number from all future SMS sends and confirms the unsubscribe with a final SMS. Patients may also reply <strong>HELP</strong> at any time, or contact us at <a href="mailto:mmacha1106@gmail.com">mmacha1106@gmail.com</a>, for assistance.</p>
-
-<p>Industry-standard opt-out keywords (STOP, STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT) are all honored.</p>
-
-<h2>Time-of-Day Restrictions</h2>
-<p>Bagheera only sends non-emergency SMS messages between 9:00 AM and 8:00 PM in the recipient's local time, in compliance with TCPA quiet-hours requirements.</p>
-
-<h2>Data Sharing</h2>
-<p>Phone numbers collected through the intake process are not sold, rented, or shared with third parties for marketing purposes. Data sharing is limited to the service providers that operate the messaging service (such as Twilio) under strict confidentiality agreements. See our <a href="/privacy.html">Privacy Policy</a> for full details.</p>
-
-<h2>Contact Us</h2>
-<p>If you have questions about Bagheera's SMS consent process, please contact us at:</p>
-<p>Email: <a href="mailto:mmacha1106@gmail.com">mmacha1106@gmail.com</a></p>
-
+<footer class="colophon">
+  <div class="wrap">
+    <div class="row">
+      <div>
+        <div class="brand">◆ Bagheera AI LLC
+          <small>215 W College Ave #601<br>Tallahassee, FL 32301<br>(734) 474-9277 · hello@bagheera-ai.com</small>
+        </div>
+      </div>
+      <div class="col">
+        <h5>Product</h5>
+        <a href="/product.html">Treatment Chaser</a>
+        <a href="/sms-consent.html">SMS Program</a>
+      </div>
+      <div class="col">
+        <h5>Company</h5>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="meta">© 2026 Bagheera AI LLC · All rights reserved · Florida Limited Liability Company</div>
+  </div>
+</footer>
 </body>
 </html>

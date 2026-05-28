@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — Treatment Chaser — Bagheera AI</title>
+<meta name="description" content="The Treatment Chaser is a focused B2B SaaS for dental practices that automatically follows up with patients about unscheduled treatment plans via HIPAA-aware SMS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-inner">
+      <a href="/index.html" class="wordmark">Bagheera AI <span>Dental Operations · Florida</span></a>
+      <nav class="primary"><ul><li><a href="/index.html">Home</a></li><li><a href="/product.html" class="active">Product</a></li><li><a href="/about.html">About</a></li><li><a href="/sms-consent.html">SMS Program</a></li><li><a href="/contact.html">Contact</a></li></ul></nav>
+    </div>
+  </div>
+</header>
+<div class="wrap">
+  <section class="page-head">
+    <div class="kicker">Product · Treatment Chaser</div>
+    <h1>The platform that <em>chases unscheduled treatment</em>.</h1>
+    <p class="sub">A focused, single-purpose B2B SaaS for dental practices. Connects to your practice management system, identifies open treatment plans, and follows up with patients by SMS &mdash; with full HIPAA, TCPA, and CTIA compliance built in.</p>
+  </section>
+
+  <section class="block">
+    <div class="sec-head">
+      <div class="sec-num">01 /</div>
+      <h2 class="sec-title">What it <em>does</em>.</h2>
+    </div>
+    <div class="sec-body">
+      <div class="marginalia">
+        <span class="line">Connects to PMS</span>
+        <span class="line">Finds open plans</span>
+        <span class="line">Texts patients</span>
+        <span class="line">Books appts</span>
+      </div>
+      <div class="body-content">
+        <p class="lede">
+          A patient leaves the dental office with a recommended treatment plan &mdash;
+          a crown, a deep cleaning, a few fillings &mdash; and doesn&rsquo;t schedule it. Weeks
+          go by. The front desk is too busy to chase every one of them by hand.
+          The revenue, and the care, slip away.
+        </p>
+        <p>
+          The Treatment Chaser solves exactly this. Once per day, our platform:
+        </p>
+        <ol>
+          <li><strong>Reads</strong> the practice&rsquo;s active patients and open treatment plans from their existing PMS (Dentrix, Eaglesoft, or Open Dental).</li>
+          <li><strong>Filters</strong> for patients who left with a real, priced, unaccepted treatment plan and who have not been contacted in the last 14 days.</li>
+          <li><strong>Sends</strong> a personalized SMS message on behalf of the practice, referencing the patient by first name and the practice by name &mdash; nothing more.</li>
+          <li><strong>Listens</strong> for the patient&rsquo;s reply. If they say <code>YES</code>, the front desk is notified. If they say <code>STOP</code>, they are permanently opted out.</li>
+          <li><strong>Logs</strong> every message, every reply, every opt-out &mdash; an immutable audit trail for the practice.</li>
+        </ol>
+
+        <h3>Sample <em>message</em></h3>
+        <div class="sms-sample">
+          <div class="meta">From: Plymouth Dentistry</div>
+          Hi Sarah, this is Plymouth Dentistry. We noticed you have a treatment plan we discussed at your last visit. Would you like to schedule? Reply YES to have us call, or STOP to opt out.
+        </div>
+        <p style="font-size:14px;color:var(--ink-muted);max-width:60ch;">
+          Every message identifies the practice by name. No PHI (procedure codes, costs, conditions) is ever sent over SMS. STOP and HELP keywords are honored on every send.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="sec-head">
+      <div class="sec-num">02 /</div>
+      <h2 class="sec-title">How the <em>chase loop</em> works.</h2>
+    </div>
+    <div class="sec-body">
+      <div class="marginalia">
+        <span class="line">Daily cron</span>
+        <span class="line">07:00 local</span>
+        <span class="line">9am&ndash;6pm send</span>
+        <span class="line">50/hr cap</span>
+      </div>
+      <div class="body-content">
+        <p>
+          The loop runs once per day, on a schedule set per practice. Each step is
+          designed to be safe, auditable, and reversible.
+        </p>
+        <div class="flow">
+          <div class="step">
+            <div>
+              <h4>Sync from the practice management system.</h4>
+              <p>Through a secure integration partner, the platform pulls the day&rsquo;s active patients, open treatment plans, and recent appointment history from the practice&rsquo;s PMS. The data lives encrypted at rest, scoped to that single practice.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>Identify chase candidates.</h4>
+              <p>Active patients with a valid mobile number, who have provided written SMS consent at intake, whose treatment plan is open and unaccepted, and who have not received a message in the prior 14 days.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>Render a personalized message.</h4>
+              <p>One of a small set of pre-approved templates is selected by treatment type. The patient&rsquo;s first name, the practice name, and the practice callback phone are substituted in. Every message includes STOP and HELP instructions.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>Send through a registered A2P 10DLC sender.</h4>
+              <p>Messages are dispatched only between 9 AM and 6 PM in the practice&rsquo;s local timezone, rate-limited to 50 messages per hour per practice. Each send is logged with a provider message ID for delivery tracking.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>Parse the patient&rsquo;s reply.</h4>
+              <p><strong>YES</strong> / <strong>SCHEDULE</strong> / <strong>CALL ME</strong> &rarr; the conversation is marked &ldquo;interested&rdquo; and the front desk is notified. <strong>STOP</strong> / <strong>UNSUBSCRIBE</strong> / <strong>CANCEL</strong> &rarr; the patient is added to the practice&rsquo;s permanent opt-out list and never contacted again.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>Front desk books the appointment.</h4>
+              <p>A human staff member at the practice receives the notification and contacts the patient to confirm a time. The appointment is written back to the practice management system. The loop closes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="sec-head">
+      <div class="sec-num">03 /</div>
+      <h2 class="sec-title">Non-negotiable <em>rules</em>.</h2>
+    </div>
+    <div class="sec-body">
+      <div class="marginalia">
+        <span class="line">Every send</span>
+        <span class="line">Every patient</span>
+        <span class="line">Every practice</span>
+        <span class="line">Always</span>
+      </div>
+      <div class="body-content">
+        <p>
+          The HIPAA, TCPA, and CTIA messaging rules below are not aspirational. They
+          are conditions our platform continuously satisfies and that we audit on
+          every deploy.
+        </p>
+        <div class="compliance">
+          <ul>
+            <li><strong>Affirmative written consent.</strong> Every patient who receives a message has signed the practice&rsquo;s intake form opting in to SMS communications. The checkbox is unchecked by default, and the consent language is published on our <a href="/sms-consent.html">SMS Program page</a>.</li>
+            <li><strong>BAAs signed before data flows.</strong> A signed Business Associate Agreement is in place with every dental practice customer before any patient data transits our platform.</li>
+            <li><strong>No PHI over SMS.</strong> Outbound messages reference the patient&rsquo;s first name and the practice name only. Procedure details, costs, and clinical information stay in the practice&rsquo;s PMS.</li>
+            <li><strong>Time-of-day gating.</strong> Sending is restricted to 9 AM &ndash; 6 PM in the patient&rsquo;s local timezone, per TCPA and CTIA messaging guidelines.</li>
+            <li><strong>STOP and HELP, always.</strong> Every patient can unsubscribe by replying STOP to any message. Opt-outs are permanent, immutable, and honored within seconds.</li>
+            <li><strong>Encryption everywhere.</strong> All data is encrypted at rest and in transit. Database connections require TLS. No plaintext, no exceptions.</li>
+            <li><strong>No data sharing.</strong> No mobile information will be shared with third parties or affiliates for marketing or promotional purposes at any time.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <h3>Want to see the Treatment Chaser <em>running on your practice&rsquo;s data?</em></h3>
+    <div class="actions">
+      <a href="mailto:hello@bagheera-ai.com">hello@bagheera-ai.com</a>
+      <a href="tel:+17344749277">(734) 474-9277</a>
+      <a href="/contact.html">Contact page &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<footer class="colophon">
+  <div class="wrap">
+    <div class="row">
+      <div>
+        <div class="brand">◆ Bagheera AI LLC
+          <small>215 W College Ave #601<br>Tallahassee, FL 32301<br>(734) 474-9277 · hello@bagheera-ai.com</small>
+        </div>
+      </div>
+      <div class="col">
+        <h5>Product</h5>
+        <a href="/product.html">Treatment Chaser</a>
+        <a href="/sms-consent.html">SMS Program</a>
+      </div>
+      <div class="col">
+        <h5>Company</h5>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="meta">© 2026 Bagheera AI LLC · All rights reserved · Florida Limited Liability Company</div>
+  </div>
+</footer>
+</body>
+</html>
